@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        IPO for game_intro
+            Inputs:         Character Name, Character Type, Experience tokens, Health tokens, Supply tokens
+            Processing:     Get character name, character type, experience tokens, health tokens, and supply tokens from user
+                    Calculate total health tokens,
+                    calculate total experience tokens,
+                    calculate total supply tokens,
+                    calculate total cost
+                    Display the output ( Is this necessary if we are submitting also? )
+                    Submit output to game-intro.php for processing
+            Outputs:        Character name, character type, total health tokens, total experience tokens, total supply tokens, total cost
+
+        Algorithm for game_intro.html  
+        prompt for characterName
+        get characterName
+        prompt for characterType
+        get characterType
+        prompt for experienceTokens
+        get experienceTokens
+        prompt for healthTokens
+        get healthTokens
+        prompt for supplyTokens
+        get supplyTokens
+        submint characterName,characterType,experienceTokens,healthTokens,supplyTokens to game-intro.php 
+        End
+
+        Algorithm for game_intro.php
+        Receive characterName,characterType,experienceTokens,healthTokens,supplyTokens from game-intro.html
+        totalExperienceTokens = experienceTokens / 2
+        totalHealthTokens = healthTokens / 10
+        totalSupplyTokens = supplyTokens /25
+        totalCost = totalExperienceTokens + totalHealthTokens + totalSupplyTokens
+        Display characterName,characterType,totalExperienceTokens,totalHealthTokens,totalSupplyTokens,totalCost
+        End
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Foskey-A4-game-intro.css">
+    <title>Character Creation</title>
+</head>
+<body>
+    <h1>Character Creation</h1>
+    <p>YOU HAVE 10 GOLD PIECES</p>
+    <P>1 gold piece buys 10 health tokens</P>
+    <p>1 gold piece buys 2 experience tokens</p>
+    <p>1 gold piece buys 10 supply tokens</p>
+    <img src="Foskey-A4-image.jpg" alt="character creation picture" style="width: 300px; height: 300px; margin-top: 5px;">
+    <form action="gameIntro.php" method="post">
+        <p>Enter your character's name:
+            <input type = "text" size = "20" name = "charName"></p>
+            <p>Select your character's type:
+                <select name = "charType">
+                    <option>Dwarf</option>
+                    <option>Elf</option>
+                    <option>Human</option>
+                    <option>Wizard</option>
+                </select>
+            </p>
+            <p>Purchase health tokens:
+                <select name = "healthTokens">
+                    <option>0</option>
+                    <option>10</option>
+                    <option>20</option>
+                    <option>30</option>
+                </select>
+            </p>
+            <p>Purchase experience tokens:
+                <select name = "expTokens">
+                    <option>0</option>
+                    <option>2</option>
+                    <option>4</option>
+                    <option>6</option>
+                    <option>8</option>
+                    <option>10</option>
+                </select>
+            </p>
+            <p>Purchase supply tokens:
+                <select name = "supplyTokens">
+                    <option>0</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>75</option>
+                    <option>100</option>
+                </select>
+            </p>
+            <p><input type = "submit" value = "Create Character">
+                <input type = "reset" value = "Clear the form">
+          </p>
+          
+        
+
+    </form>
+    
+</body>
+</html>

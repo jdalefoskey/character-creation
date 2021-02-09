@@ -1,0 +1,33 @@
+IPO for game_intro
+    Inputs:         Character Name, Character Type, Experience tokens, Health tokens, Supply tokens
+    Processing:     Get character name, character type, experience tokens, health tokens, and supply tokens from user
+                    Calculate total health tokens,
+                    calculate total experience tokens,
+                    calculate total supply tokens,
+                    calculate total cost
+                    Display the output ( Is this necessary if we are submitting also? )
+                    Submit output to game-intro.php for processing
+    Outputs:        Character name, character type, total health tokens, total experience tokens, total supply tokens, total cost
+
+Algorithm for game_intro.html  
+    prompt for characterName
+    get characterName
+    prompt for characterType
+    get characterType
+    prompt for experienceTokens
+    get experienceTokens
+    prompt for healthTokens
+    get healthTokens
+    prompt for supplyTokens
+    get supplyTokens
+    submint characterName,characterType,experienceTokens,healthTokens,supplyTokens to game-intro.php 
+    End
+
+Algorithm for game_intro.php
+    Receive characterName,characterType,experienceTokens,healthTokens,supplyTokens from game-intro.html
+    totalExperienceTokens = experienceTokens / 2
+    totalHealthTokens = healthTokens / 10
+    totalSupplyTokens = supplyTokens /25
+    totalCost = totalExperienceTokens + totalHealthTokens + totalSupplyTokens
+    Display characterName,characterType,totalExperienceTokens,totalHealthTokens,totalSupplyTokens,totalCost
+    End

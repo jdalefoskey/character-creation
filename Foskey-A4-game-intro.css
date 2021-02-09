@@ -1,0 +1,20 @@
+body {
+  background-image: url("backgroundImage.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-family: georgia;
+  margin-left: 10px;
+}
+
+img {
+  float: right;
+  border-radius: 40px;
+  border: solid black;
+}
+
+h1 {
+  text-align: center;
+}
